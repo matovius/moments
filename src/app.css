@@ -43,12 +43,7 @@
 
   &::selection {
     color: hsl(var(--clr-white));
-    background: hsl(var(--clr-black));
-
-    @media (prefers-color-scheme: dark) {
-      color: hsl(var(--clr-black));
-      background: hsl(var(--clr-white));
-    }
+    background: hsl(var(--clr-neutral-500));
   }
 
   &:not(:defined) {
