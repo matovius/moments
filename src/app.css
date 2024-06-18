@@ -12,6 +12,7 @@
     'Helvetica Neue',
     sans-serif;
   --font-poppins: 'Poppins', var(--font-sys);
+  --font-recursive: 'Recursive Variable';
 
   /* COLORS */
   --clr-white: 0 0% 100%;
@@ -28,12 +29,14 @@
   --clr-neutral-800: 0 0% 20%;
   --clr-neutral-900: 0 0% 10%;
   --clr-neutral-950: 0 0% 5%;
+
 }
 
 *,
 *::before,
 *::after {
-  font-family: var(--font-poppins);
+  font-family: var(--font-recursive);
+  font-feature-settings: "MONO" var(--mono, 1), "CASL" var(--casual, 0);
   font-size: 16px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -52,20 +55,19 @@
   }
 }
 
+html {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-display: swap;
-  color-scheme: light;
-  color: hsl(var(--clr-neutral-950));
-  background: hsl(var(--clr-white));
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-    color: hsl(var(--clr-neutral-50));
-    background: hsl(var(--clr-neutral-950));
-  }
+  color-scheme: dark;
+  color: hsl(var(--clr-neutral-50));
+  background: hsl(var(--clr-neutral-950));
 }
 
 img,
@@ -95,74 +97,147 @@ small {
   overflow-wrap: break-word;
 }
 
-.button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --mono: 0;
+  --casual: 1;
+  font-weight: 1000;
+}
+
+p,
+small {
+  --mono: 1;
+  --casual: 1;
+}
+
+p {
+  font-weight: 400;
+}
+
+small {
+  font-weight: 500;
+}
+
+span {
+  font: inherit;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.h2 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.h3 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.h4 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.h5 {
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.h6 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.p {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 500;
+}
+
+.small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 4px;
-  padding-block: 4px;
-  padding-inline: 12px;
+  padding-block: var(--pad-y, 4px);
+  padding-inline: var(--pad-x, 12px);
   border: none;
-  border-radius: 9999rem;
+  border-radius: 9999px;
   outline: 2px solid transparent;
-  outline-offset: 4px;
-  cursor: pointer;
+  outline-offset: 2px;
+  cursor: default;
+}
 
-  &.solid {
-    color-scheme: light;
-    color: hsl(var(--clr-white));
-    background: hsl(var(--clr-black));
+.button.solid {
+  color-scheme: dark;
+  color: hsl(var(--clr-black));
+  background: hsl(var(--clr-white));
 
-    &:focus-visible {
-      outline-color: hsl(var(--clr-black));
-    }
+  &:is(:hover, :focus) {
+    background: hsl(var(--clr-neutral-200));
+  }
 
-    @media (prefers-color-scheme: dark) {
-      color-scheme: dark;
-      color: hsl(var(--clr-black));
-      background: hsl(var(--clr-white));
+  &:focus-visible {
+    outline-color: hsl(var(--clr-white));
+  }
+}
 
-      &:focus-visible {
-        outline-color: hsl(var(--clr-white));
-      }
-    }
+.button.ghost {
+  color-scheme: dark;
+  color: hsl(var(--clr-white));
+  background: transparent;
+
+  &:is(:hover, :focus) {
+    background: hsl(var(--clr-neutral-800));
+  }
+
+  &:focus-visible {
+    outline-color: hsl(var(--clr-white));
   }
 }
 
 .input {
-  color-scheme: light;
+  color-scheme: dark;
   appearance: none;
-  color: hsl(var(--clr-neutral-950));
+  color: hsl(var(--clr-white));
   width: 100%;
   max-width: 600px;
   padding-block: 12px;
   padding-inline: 24px;
   border: none;
-  border-radius: 9999rem;
-  background: hsl(var(--clr-neutral-200));
+  border-radius: 9999px;
+  background: hsl(var(--clr-black));
   outline: 2px solid transparent;
-  outline-offset: 4px;
 
   &:focus-visible {
-    outline-color: hsl(var(--clr-black));
+    outline-color: hsl(var(--clr-white));
   }
 
   &::placeholder {
     color: hsl(var(--clr-neutral-600));
   }
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-    color: hsl(var(--clr-white));
-    background: hsl(var(--clr-black));
-
-    &:focus-visible {
-      outline-color: hsl(var(--clr-white));
-    }
-  }
+.sr-only {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  clip-path: rect(0, 0, 0, 0);
 }
