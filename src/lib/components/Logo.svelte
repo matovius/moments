@@ -10,18 +10,10 @@
   .logo {
     width: 100%;
     height: 100%;
-    color-scheme: light;
+    color-scheme: dark;
 
     & > path {
-      fill: hsl(var(--clr-black));
-    }
-
-    @media (prefers-color-scheme: dark) {
-      color-scheme: dark;
-
-      & > path {
-        fill: hsl(var(--clr-white));
-      }
+      fill: hsl(var(--clr-white));
     }
   }
 </style>
