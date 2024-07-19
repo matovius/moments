@@ -38,39 +38,37 @@
 *,
 *::before,
 *::after {
-  font-family: var(--font-recursive);
-  font-feature-settings: "MONO" var(--mono, 1), "CASL" var(--casual, 0);
-  font-size: 16px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  transition: all 200ms ease;
+	/* font-feature-settings:
+		'MONO' var(--mono, 1),
+		'CASL' var(--casual, 0); */
+	line-height: 1.5;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: all 200ms ease-out;
 
-  &::selection {
-    color: hsl(var(--clr-white));
-    background: hsl(var(--clr-neutral-500));
-  }
+	&::selection {
+		color: hsl(var(--clr-white));
+		background: hsl(var(--clr-neutral-500));
+	}
 
-  &:not(:defined) {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-html {
-  height: 100dvh;
-  overflow: hidden;
+	&:not(:defined) {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 body {
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-display: swap;
-  color-scheme: dark;
-  color: hsl(var(--clr-neutral-50));
-  background: hsl(var(--clr-neutral-950));
+	font-family: var(--font-work-sans);
+	font-size: 16px;
+	font-feature-settings: "liga", "kern";
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-display: swap;
+	color: hsl(var(--clr-neutral-800));
+	background: hsl(var(--clr-white));
 }
 
 img,
@@ -78,15 +76,15 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 h1,
@@ -97,7 +95,7 @@ h5,
 h6,
 p,
 small {
-  overflow-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 h1,
@@ -106,141 +104,190 @@ h3,
 h4,
 h5,
 h6 {
-  --mono: 0;
-  --casual: 1;
-  font-weight: 1000;
-}
-
-p,
-small {
-  --mono: 1;
-  --casual: 1;
+	font-family: var(--font-roboto);
+	font-weight: 1000;
+	font-stretch: 125%;
 }
 
 p {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 small {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 span {
-  font: inherit;
+	font: inherit;
+}
+
+.h-display {
+	font-size: 96px;
+	line-height: 1;
+}
+
+.h-xl {
+	font-size: 72px;
+	line-height: 1;
+}
+
+.h-lg {
+	font-size: 60px;
+	line-height: 1;
+}
+
+.h-md {
+	font-size: 48px;
+	line-height: 1;
+}
+
+.h-sm {
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+.h-xs {
+	font-size: 24px;
+	line-height: 1.2;
 }
 
 .h1 {
-  font-size: 60px;
-  line-height: 1;
+	font-size: 60px;
+	line-height: 1;
 }
 
 .h2 {
-  font-size: 48px;
-  line-height: 1;
+	font-size: 48px;
+	line-height: 1;
 }
 
 .h3 {
-  font-size: 40px;
-  line-height: 1.2;
+	font-size: 40px;
+	line-height: 1.2;
 }
 
 .h4 {
-  font-size: 36px;
-  line-height: 1.2;
+	font-size: 36px;
+	line-height: 1.2;
 }
 
 .h5 {
-  font-size: 30px;
-  line-height: 1.5;
+	font-size: 30px;
+	line-height: 1.5;
 }
 
 .h6 {
-  font-size: 24px;
-  line-height: 1.5;
+	font-size: 24px;
+	line-height: 1.5;
 }
 
 .p {
-  font-size: 16px;
-  line-height: 1.5;
+	font-size: 16px;
+	line-height: 1.5;
 }
 
 .small {
-  font-size: 12px;
-  line-height: 1.5;
+	font-size: 12px;
+	line-height: 1.5;
 }
 
-.button {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  padding-block: var(--pad-y, 4px);
-  padding-inline: var(--pad-x, 12px);
-  border: none;
-  border-radius: 9999px;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  cursor: default;
+.btn {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	padding-block: var(--pad-y, 4px);
+	padding-inline: var(--pad-x, 12px);
+	border: 1px solid transparent;
+	border-radius: 9999px;
+	background: transparent;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	cursor: default;
+	user-select: none;
+	-webkit-tap-highlight-color: none;
+
+	&:focus-visible {
+		outline-color: hsl(var(--clr-black));
+	}
 }
 
-.button.solid {
-  color-scheme: dark;
-  color: hsl(var(--clr-black));
-  background: hsl(var(--clr-white));
+.btn.btn-default {
+	color: hsl(var(--clr-white));
+	background-color: hsl(var(--clr-neutral-950));
 
-  &:is(:hover, :focus) {
-    background: hsl(var(--clr-neutral-200));
-  }
-
-  &:focus-visible {
-    outline-color: hsl(var(--clr-white));
-  }
+	&:is(:hover, :focus) {
+		background-color: hsl(var(--clr-neutral-800));
+	}
 }
 
-.button.ghost {
-  color-scheme: dark;
-  color: hsl(var(--clr-white));
-  background: transparent;
+.btn.btn-inverse {
+	color: hsl(var(--clr-800));
+	background-color: hsl(var(--clr-white));
 
-  &:is(:hover, :focus) {
-    background: hsl(var(--clr-neutral-800));
-  }
+	&:is(:hover, :focus) {
+		color: hsl(var(--clr-neutral-950));
+		background-color: hsl(var(--clr-neutral-200));
+	}
+}
 
-  &:focus-visible {
-    outline-color: hsl(var(--clr-white));
-  }
+.btn.btn-primary {
+	color: hsl(var(--clr-white));
+	background-color: hsl(var(--clr-primary-500));
+
+	&:is(:hover, :focus) {
+		background-color: hsl(var(--clr-primary-700));
+	}
+}
+
+.btn.btn-outlined {
+	color: hsl(var(--clr-neutral-800));
+	border-color: hsl(var(--clr-neutral-200));
+
+	&:is(:hover, :focus) {
+		background-color: hsl(var(--clr-neutral-200));
+		border-color: hsl(var(--clr-neutral-300));
+	}
+}
+
+.btn.btn-ghost {
+	color: hsl(var(--clr-neutral-800));
+
+	&:is(:hover, :focus) {
+		background-color: hsl(var(--clr-neutral-200));
+	}
 }
 
 .input {
-  color-scheme: dark;
-  appearance: none;
-  color: hsl(var(--clr-white));
-  width: 100%;
-  max-width: 600px;
-  padding-block: 12px;
-  padding-inline: 24px;
-  border: none;
-  border-radius: 9999px;
-  background: hsl(var(--clr-black));
-  outline: 2px solid transparent;
+	appearance: none;
+	font-weight: 500;
+	color: hsl(var(--clr-neutral-950));
+	width: 100%;
+	max-width: 600px;
+	padding-block: 12px;
+	padding-inline: 24px;
+	border: none;
+	border-radius: 9999px;
+	background: hsl(var(--clr-neutral-200));
+	outline: 2px solid transparent;
 
-  &:focus-visible {
-    outline-color: hsl(var(--clr-white));
-  }
+	&:focus-visible {
+		outline-color: hsl(var(--clr-black));
+	}
 
-  &::placeholder {
-    color: hsl(var(--clr-neutral-600));
-  }
+	&::placeholder {
+		color: hsl(var(--clr-neutral-600));
+	}
 }
 
 .sr-only {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  clip-path: rect(0, 0, 0, 0);
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	clip-path: rect(0, 0, 0, 0);
 }
