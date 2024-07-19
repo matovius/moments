@@ -6,22 +6,33 @@
 	--font-roboto: 'Roboto Flex Variable', var(--font-sys);
 	--font-work-sans: 'Work Sans Variable', var(--font-sys);
 
-  /* COLORS */
-  --clr-white: 0 0% 100%;
-  --clr-black: 0 0% 0%;
-  /* Neutral Palette */
-  --clr-neutral-50: 0 0% 95%;
-  --clr-neutral-100: 0 0% 90%;
-  --clr-neutral-200: 0 0% 80%;
-  --clr-neutral-300: 0 0% 70%;
-  --clr-neutral-400: 0 0% 60%;
-  --clr-neutral-500: 0 0% 50%;
-  --clr-neutral-600: 0 0% 40%;
-  --clr-neutral-700: 0 0% 30%;
-  --clr-neutral-800: 0 0% 20%;
-  --clr-neutral-900: 0 0% 10%;
-  --clr-neutral-950: 0 0% 5%;
-
+	/* COLORS */
+	--clr-white: 0 0% 100%;
+	--clr-black: 0 0% 0%;
+	/* Neutral Palette */
+	--clr-neutral-50: 0 0% 95%;
+	--clr-neutral-100: 0 0% 90%;
+	--clr-neutral-200: 0 0% 80%;
+	--clr-neutral-300: 0 0% 70%;
+	--clr-neutral-400: 0 0% 60%;
+	--clr-neutral-500: 0 0% 50%;
+	--clr-neutral-600: 0 0% 40%;
+	--clr-neutral-700: 0 0% 30%;
+	--clr-neutral-800: 0 0% 20%;
+	--clr-neutral-900: 0 0% 10%;
+	--clr-neutral-950: 0 0% 5%;
+	/* Primary Palette (Blu) */
+	--clr-primary-50: 219, 92%, 95%;
+	--clr-primary-100: 219, 92%, 90%;
+	--clr-primary-200: 219, 94%, 80%;
+	--clr-primary-300: 219, 94%, 69%;
+	--clr-primary-400: 219, 94%, 59%;
+	--clr-primary-500: 219, 98%, 49%;
+	--clr-primary-600: 219, 98%, 39%;
+	--clr-primary-700: 219, 99%, 29%;
+	--clr-primary-800: 219, 98%, 20%;
+	--clr-primary-900: 219, 100%, 10%;
+	--clr-primary-950: 219, 100%, 5%;
 }
 
 *,
