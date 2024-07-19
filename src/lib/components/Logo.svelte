@@ -13,10 +13,10 @@
   .logo {
     width: 100%;
     height: 100%;
-    color-scheme: dark;
+    color: inherit;
 
     & > path {
-      fill: hsl(var(--clr-white));
+      fill: currentColor;
     }
   }
 </style>
