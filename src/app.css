@@ -121,8 +121,16 @@ span {
 }
 
 .h-display {
-	font-size: 96px;
+	font-size: 72px;
 	line-height: 1;
+
+	@media screen and (min-width: 480px) {
+		font-size: 96px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 7vw;
+	}
 }
 
 .h-xl {
