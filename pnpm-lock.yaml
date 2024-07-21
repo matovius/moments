@@ -14,6 +14,12 @@ importers:
       '@fontsource-variable/recursive':
         specifier: ^5.0.18
         version: 5.0.18
+      '@fontsource-variable/roboto-flex':
+        specifier: ^5.0.15
+        version: 5.0.15
+      '@fontsource-variable/work-sans':
+        specifier: ^5.0.19
+        version: 5.0.19
       bits-ui:
         specifier: ^0.21.12
         version: 0.21.12(svelte@4.2.18)
@@ -249,6 +255,12 @@ packages:
 
   '@fontsource-variable/recursive@5.0.18':
     resolution: {integrity: sha512-uBvE6vEEfXssr2epyM5fFgVvVZH9mLBKu3ikl320UxyfrGx/x5TWWcZ7pvichFnY/217c9bm7dMx3cDaTteIsA==}
+
+  '@fontsource-variable/roboto-flex@5.0.15':
+    resolution: {integrity: sha512-CTBG6EceGcuj49sYZVPx533laiGxKboq0H4GLTJ+/2FkqTsSYIYoF8RzeyySTiCSmY7+EfWckfwYW7L9Wlh3bw==}
+
+  '@fontsource-variable/work-sans@5.0.19':
+    resolution: {integrity: sha512-UAHRcHDhCt1RyDwzigdQXFwL6skyVDQJxcnD7neHEdAHP9aQuDPWDWeHUfWsmPiBlseOlyczpfsQQcAllOxA9w==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -1407,6 +1419,10 @@ snapshots:
   '@floating-ui/utils@0.2.4': {}
 
   '@fontsource-variable/recursive@5.0.18': {}
+
+  '@fontsource-variable/roboto-flex@5.0.15': {}
+
+  '@fontsource-variable/work-sans@5.0.19': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:

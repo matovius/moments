@@ -33,6 +33,8 @@
 	"dependencies": {
 		"@floating-ui/dom": "^1.6.7",
 		"@fontsource-variable/recursive": "^5.0.18",
+		"@fontsource-variable/roboto-flex": "^5.0.15",
+		"@fontsource-variable/work-sans": "^5.0.19",
 		"bits-ui": "^0.21.12",
 		"date-fns": "^3.6.0",
 		"dayjs": "^1.11.11",
