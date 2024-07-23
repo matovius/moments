@@ -306,10 +306,14 @@ span {
 	max-width: 600px;
 	padding-block: 12px;
 	padding-inline: 24px;
-	border: none;
+	border: 1px solid hsl(var(--clr-neutral-200));
 	border-radius: 9999px;
-	background: hsl(var(--clr-neutral-200));
+	background-color: hsl(var(--clr-neutral-100));
 	outline: 2px solid transparent;
+
+	&:is(:hover, :focus) {
+		background-color: hsl(var(--clr-white));
+	}
 
 	&:focus-visible {
 		outline-color: hsl(var(--clr-black));
