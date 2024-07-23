@@ -283,6 +283,7 @@ span {
 	border-color: hsl(var(--clr-neutral-200));
 
 	&:is(:hover, :focus) {
+		color: hsl(var(--clr-neutral-950));
 		background-color: hsl(var(--clr-neutral-200));
 		border-color: hsl(var(--clr-neutral-300));
 	}
@@ -292,6 +293,7 @@ span {
 	color: hsl(var(--clr-neutral-800));
 
 	&:is(:hover, :focus) {
+		color: hsl(var(--clr-neutral-950));
 		background-color: hsl(var(--clr-neutral-200));
 	}
 }
