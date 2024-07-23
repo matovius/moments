@@ -1,13 +1,14 @@
 <script lang="ts">
   import { Button } from 'bits-ui';
-import Header from './header.svelte';
+  import Header from './header.svelte';
 </script>
 
 <svelte:head>
-  <title>Moments: Capture your thoughts</title>
+  <title>Moments - Capture your thoughts</title>
 </svelte:head>
 
 <Header />
+
 <main class="main">
   <section id="hero-section" class="hero">
     <div class="container">
