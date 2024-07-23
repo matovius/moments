@@ -24,7 +24,7 @@ import Header from './header.svelte';
           <span>Get early access</span>
         </Button.Root>
         <Button.Root
-          href="/#"
+          href="/demo"
           class="btn btn-outlined"
           style="--pad-x: 24px; --pad-y: 12px;"
         >
@@ -83,7 +83,7 @@ import Header from './header.svelte';
             <span>Get early access</span>
           </Button.Root>
           <Button.Root
-            href="/#"
+            href="/demo"
             class="btn btn-inverse"
             style="--pad-x: 24px; --pad-y: 12px;"
           >
