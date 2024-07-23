@@ -18,9 +18,9 @@
     },
     {
       label: "Try demo",
-      url: "/#"
+      url: "/demo"
     }
-  ]
+  ];
 </script>
 
 
