@@ -1,6 +1,6 @@
 import { writable, type Writable } from 'svelte/store';
-import { type Moment } from './types';
-import { getMoments } from './demo/localMoments';
+import { type Entry } from './types';
+import { getEntries } from './demo/localEntries';
 
-export const AllMoments: Writable<Moment[]> = writable<Moment[]>(getMoments());
+export const AllEntries: Writable<Entry[]> = writable<Entry[]>(getEntries());
 export const HeaderHeight: Writable<number> = writable<number>(0);

@@ -1,4 +1,4 @@
-<svg class="logo" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="logo" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <path
     d="M180 430C180 391.34 211.34 360 250 360C288.66 360 320 391.34 320 430C320 468.66 288.66 500 250 500C211.34 500 180 468.66 180 430Z"
   />

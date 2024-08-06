@@ -93,13 +93,13 @@
 
 <style>
   .header {
-    width: 100%;
+    width: 100dvw;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-inline: 24px;
     background-color: hsl(var(--clr-white));
-    position: sticky;
+    position: fixed;
     top: 0;
 
     & > .container {

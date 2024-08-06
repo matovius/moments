@@ -1,33 +1,47 @@
 <script lang="ts">
-  import { browser } from "$app/environment";
-	import { createEventDispatcher, onDestroy, onMount } from "svelte";
+	import { createEventDispatcher } from "svelte";
+	import { ContextMenu, DropdownMenu } from "bits-ui";
+	import { EllipsisIcon } from "lucide-svelte";
+  import { type Entry } from "./types";
 	import dayjs from "dayjs";
-	import { quadInOut, quadOut, quintIn } from "svelte/easing";
-	import { fade, fly, scale } from "svelte/transition";
-	import { ArrowDownIcon, ArrowUpIcon, PlusIcon, XIcon } from "lucide-svelte";
-  import { type Moment } from "./types";
-	import { AllMoments, HeaderHeight } from "./store";
-	import { Button, Dialog } from "bits-ui";
 
-  export let moment: Moment;
+  export let entry: Entry;
   export let index: number;
 
   let dispatch = createEventDispatcher();
 
   function openEntry() {
-    dispatch("open-entry", { moment: moment, index: index })
+    dispatch("open-entry", { entry: entry, index: index })
   }
 </script>
 
-<Button.Root
+<!-- <div
   class="entry"
-  id={`moment-${moment.timestamp}`}
-  data-id={moment.timestamp}
+  id={`entry-${entry.timestamp}`}
+  data-id={entry.timestamp}
   data-index={index}
-  on:click={openEntry}
 >
-  <p class="p">{moment.text}</p>
-</Button.Root>
+  <p class="p">{entry.text}</p>
+  <div class="entry-options">
+    <DropdownMenu.Root>
+      <DropdownMenu.Trigger class="btn btn-ghost" aria-labelledby="entry-dropdown-trigger-{entry.timestamp}">
+        <EllipsisIcon aria-hidden="true" />
+        <span id="entry-dropdown-trigger-{entry.timestamp}" class="sr-only">Options</span>
+      </DropdownMenu.Trigger>
+    </DropdownMenu.Root>
+  </div>
+</div> -->
+
+<ContextMenu.Root>
+  <ContextMenu.Trigger class="entry" id="entry-{entry.timestamp}">
+    {#if entry.text.includes("\n")}
+      <pre class="p" style="font: inherit;">{entry.text}</pre>
+    {:else}
+      <p class="p">{entry.text}</p>
+    {/if}
+    <small class="small">{dayjs(entry.timestamp).format("H:mm A")}</small>
+  </ContextMenu.Trigger>
+</ContextMenu.Root>
 
 <style>
   :global(.entry) {
@@ -40,9 +54,14 @@
     border: none;
     border-radius: 12px;
     position: relative;
+    isolation: isolate;
 
-    &:is(:hover, :focus) {
+    &:hover {
       background: hsl(var(--clr-neutral-100));
+    }
+
+    & > .small {
+      color: hsl(var(--clr-neutral-400));
     }
   }
 </style>

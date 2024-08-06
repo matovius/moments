@@ -1,4 +1,5 @@
 :root {
+	--separator-thickness: 1px;
 	/* FONTS */
 	--font-sys: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -33,6 +34,18 @@
 	--clr-primary-800: 219, 98%, 20%;
 	--clr-primary-900: 219, 100%, 10%;
 	--clr-primary-950: 219, 100%, 5%;
+	/* Danger Palette (Imperius) */
+	--clr-danger-50: 352, 92%, 95%;
+	--clr-danger-100: 352, 92%, 91%;
+	--clr-danger-200: 352, 94%, 81%;
+	--clr-danger-300: 352, 93%, 72%;
+	--clr-danger-400: 352, 94%, 62%;
+	--clr-danger-500: 352, 93%, 53%;
+	--clr-danger-600: 352, 83%, 42%;
+	--clr-danger-700: 352, 83%, 32%;
+	--clr-danger-800: 352, 83%, 21%;
+	--clr-danger-900: 352, 81%, 11%;
+	--clr-danger-950: 352, 85%, 5%;
 }
 
 *,
@@ -45,6 +58,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	scroll-behavior: smooth;
 	transition: all 200ms ease-out;
 
 	&::selection {
@@ -68,7 +82,10 @@ body {
 	text-rendering: optimizeLegibility;
 	font-display: swap;
 	color: hsl(var(--clr-neutral-800));
+	width: 100dvw;
+	height: 100dvh;
 	background: hsl(var(--clr-white));
+	overflow: auto;
 }
 
 img,
@@ -248,6 +265,11 @@ span {
 	&:focus-visible {
 		outline-color: hsl(var(--clr-black));
 	}
+
+	&:disabled {
+		filter: grayscale(1);
+		opacity: 0.5;
+	}
 }
 
 .btn.btn-default {
@@ -278,6 +300,15 @@ span {
 	}
 }
 
+.btn.btn-danger {
+	color: hsl(var(--clr-white));
+	background-color: hsl(var(--clr-danger-500));
+
+	&:is(:hover, :focus) {
+		background-color: hsl(var(--clr-danger-700));
+	}
+}
+
 .btn.btn-outlined {
 	color: hsl(var(--clr-neutral-800));
 	border-color: hsl(var(--clr-neutral-200));
@@ -298,14 +329,23 @@ span {
 	}
 }
 
+.btn.btn-dangerghost {
+	color: hsl(var(--clr-danger-500));
+
+	&:is(:hover, :focus) {
+		color: hsl(var(--clr-danger-700));
+		background-color: hsl(var(--clr-danger-100));
+	}
+}
+
 .input {
 	appearance: none;
 	font-weight: 500;
 	color: hsl(var(--clr-neutral-950));
 	width: 100%;
 	max-width: 600px;
-	padding-block: 12px;
-	padding-inline: 24px;
+	padding-block: var(--input-pad-y, 8px);
+	padding-inline: var(--input-pad-y, 12px);
 	border: 1px solid hsl(var(--clr-neutral-200));
 	border-radius: 9999px;
 	background-color: hsl(var(--clr-neutral-100));
@@ -324,7 +364,31 @@ span {
 	}
 }
 
+.dialog-portal {
+	isolation: isolate;
+	position: fixed;
+	z-index: 1000;
+}
+
+.dialog-overlay {
+	width: 100dvw;
+	height: 100dvh;
+	background-color: hsl(var(--clr-black) / 0.9);
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+}
+
+.horizontal-separator {
+	width: 100%;
+	height: var(--separator-thickness);
+	background-color: hsl(var(--clr-neutral-200));
+}
+
 .sr-only {
+	width: 1px;
+	height: 1px;
+	margin: -1px;
 	position: absolute;
 	opacity: 0;
 	visibility: hidden;

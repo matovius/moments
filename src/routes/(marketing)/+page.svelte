@@ -39,7 +39,7 @@
     <div class="container">
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">Take notes like you were texting someone</h3>
+          <h3 class="h-lg">Take notes like you're texting someone</h3>
           <p class="p">Be more natural and less structured, and allow yourself to put down whatever is on your mind.</p>
         </div>
         <div class="img-wrapper"></div>
@@ -47,17 +47,18 @@
       <div class="feature">
         <div class="content">
           <h3 class="h-lg">Expand your notes with rich media</h3>
-          <p class="p">Add images, videos and file attachments to give greater context to your notes, making them more comprehensive.</p>
+          <p class="p">Add audio notes, images, videos and file attachments to give greater context to your notes, making them more comprehensive.</p>
         </div>
         <div class="img-wrapper"></div>
       </div>
-      <div class="feature">
+      <!-- <div class="feature" style="display: none;">
         <div class="content">
-          <h3 class="h-lg">Make journals and tags for better organization</h3>
-          <p class="p">Encapsulate related entries into journals, and connect multiple entries using tags and references.</p>
+          <h3 class="h-lg">Create journals for better organization</h3>
+          <p class="p">Encapsulate related entries into journals, and and handle multiple aspects of your life at once.</p>
         </div>
         <div class="img-wrapper"></div>
-      </div>
+      </div> -->
+      
       <div class="feature">
         <div class="content">
           <h3 class="h-lg">
@@ -105,6 +106,8 @@
 
 <style>
   .main {
+    width: 100%;
+    max-width: 100%;
     padding-bottom: 48px;
 
     & > section {
