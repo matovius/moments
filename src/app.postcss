@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		/* COLORS */
+		--clr-white: 0 0% 100%;
+		--clr-black: 0 0% 0%;
+		/* Neutral Palette */
+		--clr-neutral-50: 0 0% 95%;
+		--clr-neutral-100: 0 0% 90%;
+		--clr-neutral-200: 0 0% 80%;
+		--clr-neutral-300: 0 0% 70%;
+		--clr-neutral-400: 0 0% 60%;
+		--clr-neutral-500: 0 0% 50%;
+		--clr-neutral-600: 0 0% 40%;
+		--clr-neutral-700: 0 0% 30%;
+		--clr-neutral-800: 0 0% 20%;
+		--clr-neutral-900: 0 0% 10%;
+		--clr-neutral-950: 0 0% 5%;
+		/* Primary Palette (Blu) */
+		--clr-primary-50: 219 92% 95%;
+		--clr-primary-100: 219 92% 90%;
+		--clr-primary-200: 219 94% 80%;
+		--clr-primary-300: 219 94% 69%;
+		--clr-primary-400: 219 94% 59%;
+		--clr-primary-500: 219 98% 49%;
+		--clr-primary-600: 219 98% 39%;
+		--clr-primary-700: 219 99% 29%;
+		--clr-primary-800: 219 98% 20%;
+		--clr-primary-900: 219 100% 10%;
+		--clr-primary-950: 219 100% 5%;
+		/* Danger Palette (Imperius) */
+		--clr-danger-50: 352 92% 95%;
+		--clr-danger-100: 352 92% 91%;
+		--clr-danger-200: 352 94% 81%;
+		--clr-danger-300: 352 93% 72%;
+		--clr-danger-400: 352 94% 62%;
+		--clr-danger-500: 352 93% 53%;
+		--clr-danger-600: 352 83% 42%;
+		--clr-danger-700: 352 83% 32%;
+		--clr-danger-800: 352 83% 21%;
+		--clr-danger-900: 352 81% 11%;
+		--clr-danger-950: 352 85% 5%;
+	}
+}
+
+*,
+*::before,
+*::after {
+	@apply scroll-smooth transition-all ease-out;
+
+	&::selection {
+		@apply text-white bg-primary-500;
+	}
+
+	&:not(:defined) {
+		@apply opacity-0 invisible pointer-events-none select-none;
+	}
+}
+
+body {
+	@apply font-work-sans text-[16px] leading-normal [font-feature-settings:"liga","kern"] text-neutral-800 bg-white dark:bg-neutral-900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-black;
+}
+
+p {
+	@apply font-normal;
+}
+
+small {
+	@apply font-medium;
+}
+
+span {
+	@apply [font:inherit];
+}
+
+.h-display {
+	@apply text-[72px] leading-none 480:text-[96px] 1200:text-[7vw];
+}
+
+.h-xl {
+	@apply text-[72px] leading-none;
+}
+
+.h-lg {
+	@apply text-[60px] leading-none;
+}
+
+.h-md {
+	@apply text-[48px] leading-none;
+}
+
+.h-sm {
+	@apply text-[36px] leading-tight;
+}
+
+.h-xs {
+	@apply text-[24px] leading-tight;
+}
+
+.p {
+	@apply text-[16px] leading-normal;
+}
+
+.small {
+	@apply text-[12px] leading-normal;
+}
+
+.nav-link {
+	@apply font-semibold no-underline text-neutral-600 min-w-max px-4
+  outline-2 outline-dashed outline-transparent
+  hover:text-neutral-950 focus:text-neutral-950 focus-visible:outline-primary-500;
+}
+
+.nav-link.current {
+	@apply text-primary-500
+  hover:text-primary-500 focus:text-primary-500;
+}
+
+.btn {
+	@apply text-[16px] font-semibold leading-normal no-underline
+  min-w-max flex flex-row justify-center items-center gap-4
+  [padding-block:var(--pad-y,4px)] [padding-inline:var(--pad-x,12px)]
+  border border-solid border-transparent rounded-[var(--btn-radius,9999rem)]
+  outline outline-2 outline-transparent outline-offset-2
+  cursor-default select-none [-webkit-tap-highlight-color:none];
+
+	@apply focus-visible:outline-black dark:focus-visible:outline-white
+	disabled:grayscale disabled:opacity-50;
+}
+
+.btn.btn-default {
+	@apply text-white dark:text-neutral-800 bg-neutral-950 dark:bg-white;
+
+	@apply hover:bg-neutral-800 dark:hover:text-black dark:hover:bg-neutral-200
+	focus:bg-neutral-800 dark:focus:bg-neutral-200;
+}
+
+.btn.btn-inverse {
+	@apply text-neutral-800 dark:text-white bg-white dark:bg-neutral-950;
+
+	@apply hover:text-neutral-950 hover:bg-neutral-200 dark:hover:bg-neutral-800
+  focus:text-neutral-950 focus:bg-neutral-200 dark:focus:bg-neutral-800;
+}
+
+.btn.btn-primary {
+	@apply text-white bg-primary-500;
+
+	@apply hover:bg-primary-700
+	focus:bg-primary-700;
+}
+
+.btn.btn-danger {
+	@apply text-white bg-danger-500;
+
+	@apply hover:bg-danger-700 focus:bg-danger-700;
+}
+
+.btn.btn-outlined {
+	@apply text-neutral-800 border-neutral-200
+	dark:text-neutral-200 dark:border-neutral-800;
+
+	@apply hover:text-neutral-950 hover:bg-neutral-200 hover:border-neutral-300
+	dark:hover:text-white dark:hover:bg-neutral-800 dark:hover:border-neutral-700
+  focus:text-neutral-950 focus:bg-neutral-200 focus:border-neutral-300
+	dark:focus:text-white dark:focus:bg-neutral-800 dark:focus:border-neutral-700;
+}
+
+.btn.btn-ghost {
+	@apply text-neutral-800 dark:text-neutral-200;
+
+	@apply hover:text-neutral-950 hover:bg-neutral-200
+	dark:hover:text-white dark:hover:bg-neutral-800
+  focus:text-neutral-950 focus:bg-neutral-200
+	dark:focus:text-white dark:focus:bg-neutral-800;
+}
+
+.input {
+	@apply appearance-none text-neutral-900 dark:text-white w-full max-w-600
+  [padding-block:var(--input-pad-y,8px)] [padding-inline:var(--input-pad-y,12px)]
+  border border-solid border-neutral-200 dark:border-neutral-800
+	rounded-full bg-neutral-100 dark:bg-neutral-800
+  outline outline-2 outline-transparent placeholder:text-neutral-500;
+
+	@apply hover:bg-white focus:bg-white
+	dark:hover:bg-neutral-900 dark:focus:bg-neutral-900
+  focus-visible:outline-black dark:focus-visible:outline-white;
+}
+
+.dialog-portal {
+	@apply isolate fixed z-[1000];
+}
+
+.dialog-overlay {
+	@apply w-[100dvw] h-[100dvh] bg-black/90 fixed inset-0 -z-[5];
+}
+
+.separator {
+	@apply bg-neutral-200 dark:bg-neutral-800;
+}
+
+.entry-card {
+	@apply [font:inherit] text-neutral-800 dark:text-neutral-200 text-start w-full max-w-600 bg-transparent p-24
+	border-none rounded-12 relative isolate select-none;
+
+	@apply hover:bg-neutral-200 focus:bg-neutral-200
+	dark:hover:bg-neutral-800 dark:focus:bg-neutral-800;
+
+	& > .small {
+		@apply text-neutral-400 dark:text-neutral-600;
+	}
+}
