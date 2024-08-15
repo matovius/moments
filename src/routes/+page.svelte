@@ -51,7 +51,7 @@
   <Form on:scroll={scrollView} />
 </main>
 
-<Dialog.Root bind:open={isUserLandingOpen}>
+<!-- <Dialog.Root bind:open={isUserLandingOpen}>
   <Dialog.Portal class="dialog-portal">
     <Dialog.Overlay class="dialog-overlay" />
 
@@ -66,4 +66,4 @@
       <LandingPage on:close={() => { isUserLandingOpen = false; }} />
     </Dialog.Content>
   </Dialog.Portal>
-</Dialog.Root>
+</Dialog.Root> -->
