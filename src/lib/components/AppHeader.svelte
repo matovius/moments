@@ -31,26 +31,9 @@
   })
 </script>
 
-<header
-  class="w-full flex justify-center items-center px-24"
-  style="opacity: 0;" bind:this={header} bind:clientHeight={headerHeight}
->
-  <div class="w-full max-w-600 flex flex-row justify-between py-12">
+<header class="w-full flex justify-center items-center px-24 border-b border-solid border-neutral-200 dark:border-neutral-800">
+  <div class="w-full flex flex-row justify-between py-12">
     <div class="flex flex-row justify-start items-center gap-12">
-      <a
-        href="/"
-        class="home-link text-neutral-800 dark:text-neutral-200 rounded-full
-        outline-dashed outline-2 outline-transparent outline-offset-4
-        hover:text-primary-500 focus:text-primary-500
-        focus-visible:outline-primary-500"
-        aria-labelledby="back-to-homepage-link"
-      >
-        <div class="size-24 aspect-square">
-          <Logo />
-        </div>
-        <span id="back-to-homepage-link" class="sr-only">Back to homepage</span>
-      </a>
-
       <div id="page-title" class="text-[16px] font-extrabold text-neutral-600 dark:text-neutral-400" role="heading" aria-level="1">
         <span>{pageTitle}</span>
       </div>
