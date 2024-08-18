@@ -30,7 +30,7 @@
     <div id="container">
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">Simplified interface</h3>
+          <h3 class="h-md">Simplified<br />interface</h3>
           <p class="p">
             Put down your thoughts in the simplest and fastest way possible without any extra steps or hinderances.
             Don't worry about formatting or structure.
@@ -40,7 +40,7 @@
       </div>
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">Text and<br />audio entries</h3>
+          <h3 class="h-md">Text and<br />audio entries</h3>
           <p class="p">
             No images or videos, no documents or files. Just simple text and audio.
             And if you're a premium user, you can get audio transcripts.
@@ -50,7 +50,7 @@
       </div>
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">Footnotes<br />and tags</h3>
+          <h3 class="h-md">Footnotes<br />and tags</h3>
           <p class="p">
             Add footnotes to issue clarifications or add greater context to an entry.
             And for better organization, add tags to your entries according to your liking.
@@ -60,7 +60,7 @@
       </div>
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">Journaling reminders</h3>
+          <h3 class="h-md">Journaling<br />reminders</h3>
           <p class="p">
             You can set reminders for when you want to get reminded to add to your journal.
             These reminders can help you get into the habit of journaling.
