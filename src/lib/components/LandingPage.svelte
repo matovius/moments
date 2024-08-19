@@ -2,8 +2,8 @@
   import { Button } from 'bits-ui';
 </script>
 
-<div class="w-full max-w-full pb-48">
-  <section id="hero-section" class="hero">
+<main class="w-full max-w-full pb-48">
+  <section id="hero" class="hero-section pb-96">
     <div id="container">
       <h1 class="h-display text-center text-neutral-950 dark:text-white">
         Capture your
@@ -25,7 +25,7 @@
     </div>
   </section>
   
-  <!-- <section id="features-section" class="features">
+  <section id="features" class="features-section">
     <div id="container">
       <div class="feature">
         <div class="content">
@@ -60,9 +60,9 @@
         <div class="img-wrapper"></div>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <!-- <section id="call-to-action" class="call-to-action">
+  <section id="waitlist" class="waitlist-section">
     <div id="container">
       <div class="p-24 rounded-24 bg-primary-500">
         <h2 class="h-xl text-white text-center selection:bg-neutral-950">Ready to change your life?</h2>
@@ -84,16 +84,9 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
-</div>
-
-<!-- <footer class="px-24 py-48 border-t border-solid border-neutral-200">
-  <div class="text-neutral-600 text-center">
-    <small class="small">Copyright {new Date().getFullYear() | 2024} - Moments - All rights reserved.</small>
-  </div>
-</footer> -->
-
+</main>
 
 <style lang="postcss">
   section {
@@ -104,15 +97,15 @@
     }
   }
 
-  /* .feature {
-    @apply w-full flex flex-col gap-24 600:flex-row 600:even:flex-row-reverse;
+  .feature {
+    @apply w-full flex flex-col gap-24 600:flex-row 600:even:flex-row-reverse pt-48;
 
     & > .content p {
       @apply pt-24;
     }
 
     & > .img-wrapper {
-      @apply w-full max-w-360 aspect-video border border-solid border-neutral-200 rounded-12 bg-neutral-50;
+      @apply w-full max-w-360 aspect-video rounded-12 bg-neutral-50 dark:bg-neutral-800;
     }
-  } */
+  }
 </style>
