@@ -207,10 +207,11 @@ span {
   [padding-block:var(--input-pad-y,8px)] [padding-inline:var(--input-pad-y,12px)]
   border border-solid border-neutral-200 dark:border-neutral-800
 	rounded-full bg-transparent
-  outline outline-2 outline-transparent placeholder:text-black dark:placeholder:text-white;
+  outline outline-2 outline-transparent
+	placeholder:text-neutral-500;
 
-	@apply hover:bg-white/20 focus:bg-white
-	dark:hover:bg-black/20 dark:focus:bg-black
+	@apply hover:bg-neutral-200 focus:bg-neutral-200
+	dark:hover:bg-neutral-800 dark:focus:bg-neutral-800
   focus-visible:outline-black dark:focus-visible:outline-white;
 }
 
