@@ -12,15 +12,16 @@
       <p class="p text-center max-w-600">
         Moments helps you keep track of your daily happenings
         and make sure you don't forget stuff.
-      </h5>
-      <div class="flex flex-col 480:flex-row gap-12">
+      </p>
+      <div class="flex flex-col justify-center items-center gap-24">
         <Button.Root
+          href="/waitlist"
           class="btn btn-primary"
           style="--pad-x: 48px; --pad-y: 12px;"
-          on:click={closeLanding}
         >
-          <span>Open the demo</span>
+          <span>Join the waitlist</span>
         </Button.Root>
+        <p class="p">or <a href="/demo" class="link text-center">try out the demo first</a></p>
       </div>
     </div>
   </section>
