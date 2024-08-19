@@ -206,11 +206,11 @@ span {
 	@apply appearance-none text-neutral-900 dark:text-white w-full max-w-600
   [padding-block:var(--input-pad-y,8px)] [padding-inline:var(--input-pad-y,12px)]
   border border-solid border-neutral-200 dark:border-neutral-800
-	rounded-full bg-neutral-100 dark:bg-neutral-800
-  outline outline-2 outline-transparent placeholder:text-neutral-500;
+	rounded-full bg-transparent
+  outline outline-2 outline-transparent placeholder:text-black dark:placeholder:text-white;
 
-	@apply hover:bg-white focus:bg-white
-	dark:hover:bg-neutral-900 dark:focus:bg-neutral-900
+	@apply hover:bg-white/20 focus:bg-white
+	dark:hover:bg-black/20 dark:focus:bg-black
   focus-visible:outline-black dark:focus-visible:outline-white;
 }
 
