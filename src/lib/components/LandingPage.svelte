@@ -1,12 +1,5 @@
 <script lang="ts">
   import { Button } from 'bits-ui';
-	import { createEventDispatcher } from 'svelte';
-
-  const dispatch = createEventDispatcher<any>();
-
-  function closeLanding() {
-    dispatch("close");
-  }
 </script>
 
 <div class="w-full max-w-full pb-48">
