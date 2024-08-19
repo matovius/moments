@@ -2,9 +2,10 @@
 
 ## Bring in the landing page - v0.1.0 - 2024-08-20
 
-Okay, I got motivated to work on this once more and I found that using a popup as a landing is a little silly. So I've decided to make a full landing page for the first minor version of the app. Let's see what we've got here:
+Okay, I got motivated to work on this once more and I found that using a popup as a landing is a little silly. So I've decided to make a full landing page and waitlist page for the first minor version of the app. Let's see what we've got here:
 
 - A spanking landing page with brief descriptions of the feature set and some good CTAs.
+- A super simple waitlist page to capture emails from potential users.
 
 ## Initial Commit - v0.0.1 - 2024-08-06
 
