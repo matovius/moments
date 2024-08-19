@@ -82,16 +82,7 @@
             href="/#"
             class="btn btn-default"
             style="--pad-x: 24px; --pad-y: 12px;"
-          >
-            <span>Get early access</span>
-          </Button.Root>
-          <Button.Root
-            href="/demo"
-            class="btn btn-inverse"
-            style="--pad-x: 24px; --pad-y: 12px;"
-          >
-            <span>Try the demo</span>
-          </Button.Root>
+          >Join the waitlist</Button.Root>
         </div>
       </div>
     </div>
