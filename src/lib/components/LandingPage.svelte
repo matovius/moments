@@ -9,7 +9,7 @@
         Capture your
         <span class="text-primary-500">thoughts</span>
       </h1>
-      <h5 class="h-xs text-center text-neutral-600 dark:text-neutral-400 max-w-600">
+      <p class="p text-center max-w-600">
         Moments helps you keep track of your daily happenings
         and make sure you don't forget stuff.
       </h5>
