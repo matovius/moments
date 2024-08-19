@@ -59,7 +59,7 @@
             <a href="/#" class="nav-link">Try the demo</a>
           </li>
           <li>
-            <Button.Root class="btn btn-default">Join the waitlist</Button.Root>
+            <Button.Root href="/waitlist" class="btn btn-default">Join the waitlist</Button.Root>
           </li>
         </ul>
       </nav>

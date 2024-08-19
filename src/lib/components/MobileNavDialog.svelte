@@ -50,7 +50,7 @@
             <a href="/#" class="nav-link" on:click={() => { open = false; }}>Try the demo</a>
           </li>
           <li>
-            <Button.Root href="/#waitlist" class="btn btn-default" on:click={() => { open = false; }}>Join the waitlist</Button.Root>
+            <Button.Root href="/waitlist" class="btn btn-default" on:click={() => { open = false; }}>Join the waitlist</Button.Root>
           </li>
         </ul>
       </nav>
