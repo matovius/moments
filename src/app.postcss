@@ -129,9 +129,14 @@ span {
 }
 
 .nav-link {
-	@apply font-semibold no-underline text-neutral-600 min-w-max px-4
-  outline-2 outline-dashed outline-transparent
-  hover:text-neutral-950 focus:text-neutral-950 focus-visible:outline-primary-500;
+	@apply font-medium no-underline
+	text-neutral-600 dark:text-neutral-400
+	min-w-max px-4
+  outline-2 outline-dashed outline-transparent;
+
+	@apply hover:text-neutral-950 dark:hover:text-white
+	focus:text-neutral-950 dark:focus:text-white
+	focus-visible:outline-primary-500;
 }
 
 .nav-link.current {
