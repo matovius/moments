@@ -30,33 +30,41 @@
     <div id="container">
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">Take notes like you're texting someone</h3>
-          <p class="p">Be more natural and less structured, and allow yourself to put down whatever is on your mind.</p>
+          <h3 class="h-lg">Simplified interface</h3>
+          <p class="p">
+            Put down your thoughts in the simplest and fastest way possible without any extra steps or hinderances.
+            Don't worry about formatting or structure.
+          </p>
         </div>
         <div class="img-wrapper"></div>
       </div>
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">Expand your notes with rich media</h3>
-          <p class="p">Add audio notes, images, videos and file attachments to give greater context to your notes, making them more comprehensive.</p>
-        </div>
-        <div class="img-wrapper"></div>
-      </div>
-      <div class="feature" style="display: none;">
-        <div class="content">
-          <h3 class="h-lg">Create journals for better organization</h3>
-          <p class="p">Encapsulate related entries into journals, and and handle multiple aspects of your life at once.</p>
+          <h3 class="h-lg">Text and<br />audio entries</h3>
+          <p class="p">
+            No images or videos, no documents or files. Just simple text and audio.
+            And if you're a premium user, you can get audio transcripts.
+          </p>
         </div>
         <div class="img-wrapper"></div>
       </div>
       <div class="feature">
         <div class="content">
-          <h3 class="h-lg">
-            Use
-            <span class="text-primary-500">Zen Mode</span>
-            for fewer distractions
-          </h3>
-          <p class="p">Want to write something in greater details with fewer distractions? Enter Zen Mode and type away.</p>
+          <h3 class="h-lg">Footnotes<br />and tags</h3>
+          <p class="p">
+            Add footnotes to issue clarifications or add greater context to an entry.
+            And for better organization, add tags to your entries according to your liking.
+          </p>
+        </div>
+        <div class="img-wrapper"></div>
+      </div>
+      <div class="feature">
+        <div class="content">
+          <h3 class="h-lg">Journaling reminders</h3>
+          <p class="p">
+            You can set reminders for when you want to get reminded to add to your journal.
+            These reminders can help you get into the habit of journaling.
+          </p>
         </div>
         <div class="img-wrapper"></div>
       </div>
@@ -65,9 +73,11 @@
 
   <section id="waitlist" class="waitlist-section">
     <div id="container">
-      <div class="p-24 rounded-24 bg-primary-500">
-        <h2 class="h-xl text-white text-center selection:bg-neutral-950">Ready to change your life?</h2>
-        <div class="flex flex-col justify-center items-center gap-12 pt-24 480:flex-row">
+      <div class="w-full px-24 py-48 rounded-24 bg-primary-500">
+        <h4 class="h-md text-white text-center selection:bg-neutral-950">Ready to change your life?</h4>
+        <div
+          class="w-full flex flex-col justify-center items-center gap-12 pt-24 480:flex-row"
+        >
           <Button.Root
             href="/#"
             class="btn btn-default"
