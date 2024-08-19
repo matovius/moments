@@ -79,7 +79,7 @@
           class="w-full flex flex-col justify-center items-center gap-12 pt-24 480:flex-row"
         >
           <Button.Root
-            href="/#"
+            href="/waitlist"
             class="btn btn-default"
             style="--pad-x: 24px; --pad-y: 12px;"
           >Join the waitlist</Button.Root>
