@@ -6,6 +6,7 @@ Okay, I got motivated to work on this once more and I found that using a popup a
 
 - A spanking landing page with brief descriptions of the feature set and some good CTAs.
 - A super simple waitlist page to capture emails from potential users.
+- Foundations for an overhauled demo app
 
 ## Initial Commit - v0.0.1 - 2024-08-06
 
