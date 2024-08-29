@@ -6,7 +6,8 @@
   <div id="container" class="w-full max-w-1200 h-full grid grid-flow-col grid-cols-[auto,1fr] 1200:border-x border-neutral-200 dark:border-neutral-800">
     <AppSidebar />  
 
-  <div class="isolate flex flex-col overflow-hidden">
-    <slot />
+    <div class="isolate flex flex-col overflow-hidden">
+      <slot />
+    </div>
   </div>
 </div>
