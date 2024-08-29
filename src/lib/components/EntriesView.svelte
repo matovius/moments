@@ -29,7 +29,7 @@
     if (browser) {
       localStorage.setItem('allEntries', JSON.stringify(entries));
       // dispatch("scroll");
-      setTimeout(scrollView, 100);
+      // setTimeout(scrollView, 100);
     }
   });
   
