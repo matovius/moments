@@ -22,13 +22,13 @@
     AllEntries.set([]);
   }
 
-  onMount(() => {
-    setTimeout(() => {
-      HeaderHeight.set(headerHeight);
-      showHeader();
-      // console.log($HeaderHeight);
-    }, 10);
-  })
+  // onMount(() => {
+  //   setTimeout(() => {
+  //     HeaderHeight.set(headerHeight);
+  //     showHeader();
+  //     // console.log($HeaderHeight);
+  //   }, 10);
+  // });
 </script>
 
 <header class="w-full flex justify-center items-center px-24 border-b border-solid border-neutral-200 dark:border-neutral-800">
