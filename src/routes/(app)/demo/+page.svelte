@@ -1,10 +1,11 @@
 <script lang="ts">
+  import dayjs from "dayjs";
   import { browser } from "$app/environment";
   import { Button } from "bits-ui";
   import AppHeader from "$lib/components/AppHeader.svelte";
   import { AllEntries } from "$lib/scripts/store";
   import { type Entry } from "$lib/scripts/types";
-	import { ChevronRightIcon } from "lucide-svelte";
+	import { SaveIcon } from "lucide-svelte";
 
   let EntryInput: HTMLInputElement;
   let inputText: string = '';
@@ -41,21 +42,32 @@
 
     return;
   }
+
+  function getCurrentDate(): number {
+    return Date.now();
+  }
 </script>
 
 <svelte:head>
-  <title>Welcome - Moments Demo App</title>
+  <title>Home - Moments Demo App</title>
 </svelte:head>
 
 <AppHeader pageTitle="Welcome to Moments" />
 
 <main class="w-full h-full max-h-full overflow-auto flex justify-start items-start px-60">
   <div id="container" class="w-full max-w-960 flex flex-col pt-120">
-    <h2 class="h-xs text-neutral-500">Add to your journal</h2>
-    <!-- <span class="h-xs">Today is {dayjs(Date.now()).format('dddd, MMM D, YYYY')}</span> -->
+    <div id="lede" class="w-full flex flex-col gap-24">
+      <h2 class="h-lg text-neutral-800 dark:text-white">It's time to add to your journal</h2>
+      <p class="p">
+        Today is
+        <span>{dayjs(getCurrentDate()).format('dddd, MMMM D, YYYY')}</span>.
+        You currently have <span>no</span> entries for today.
+      </p>
+    </div>
+
     <div class="w-full max-w-960 pt-24">
-      <form id="form" class="w-full flex justify-center items-center gap-8 py-12" on:submit|preventDefault>
-        <div class="w-full flex flex-row justify-center items-center gap-8 relative">
+      <form id="form" class="w-full flex justify-start items-start gap-8 py-12" on:submit|preventDefault>
+        <div class="w-full max-w-600 flex flex-row justify-center items-center gap-8 relative">
           <input
             type="text"
             class="input"
@@ -66,30 +78,40 @@
             bind:value={inputText}
             on:keydown={handleInputKeydown}
           />
-          <div class="absolute right-4">
+          <!-- <textarea
+            name="entry-text"
+            id="entry-text"
+            rows="8"
+            placeholder="Do you have a moment?"
+            class="input resize-none"
+            style="--input-radius: 24px;"
+            bind:this={EntryInput}
+            bind:value={inputText}
+          ></textarea> -->
+
+          <div class="absolute inset-y-0 right-4 flex flex-col justify-between items-end py-4 pointer-events-none">
             <Button.Root
-            class="btn btn-default"
-            disabled={isCtaDisabled}
-            on:click={() => {
-              saveEntry();
-              EntryInput.focus();
-            }}>
-            <span>Save</span>
+              class="btn btn-primary pointer-events-auto"
+              aria-label="Add to journal" title="Add to journal"
+              disabled={isCtaDisabled}
+              on:click={() => {
+                saveEntry();
+                EntryInput.focus();
+              }}>
+              <SaveIcon aria-hidden="true" />
             </Button.Root>
           </div>
         </div>
       </form>
     </div>
-    <div class="w-fit pt-24">
-      <!-- <a href="/demo/journal" class="link">Open your journal instead?</a> -->
+
+    <div class="w-fit flex flex-row justify-center items-center gap-12 pt-48">
       <Button.Root href="/demo/journal" class="btn btn-outlined">
-        <span>Open your journal instead</span>
-        <ChevronRightIcon aria-hidden="true" />
+        <span>Go to the journal</span>
       </Button.Root>
-      <span class="p block pl-12 py-12">Or</span>
+      <small class="small">OR</small>
       <Button.Root href="/demo/notepad" class="btn btn-outlined">
         <span>Open the notepad</span>
-        <ChevronRightIcon aria-hidden="true" />
       </Button.Root>
     </div>
   </div>
